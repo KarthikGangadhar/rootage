@@ -1,0 +1,36 @@
+{
+  "name": "rootage",
+  "version": "1.0.0",
+  "description": "This is a node based rest api which will provides you json endpoints for Movies, Nobel laureates ... etc",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KarthikGangadhar/rootage.git"
+  },
+  "keywords": [
+    "json",
+    "rest",
+    "node",
+    "movies",
+    "nobel-prize",
+    "rootage"
+  ],
+  "author": "kgangadhar <karthikg1643@gmail.com> (https://github.com/karthikgangadhar)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KarthikGangadhar/rootage/issues"
+  },
+  "homepage": "https://github.com/KarthikGangadhar/rootage#readme",
+  "dependencies": {
+    "hapi": "^13.0.0",
+    "hapi-swagger": "^6.0.0",
+    "inert": "^4.1.x",
+    "joi": "^10.1.0",
+    "mongoose": "^5.0.6",
+    "vision": "^4.1.x"
+  }
+}
