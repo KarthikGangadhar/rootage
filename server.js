@@ -3,7 +3,11 @@ const Hapi = require('hapi');
 const Inert = require('inert');
 const Vision = require('vision');
 const Pack = require('./package');
-const Routes = require('./app/helpers/routes');
+
+//merging routes
+const MovieRoutes = require('./rootage/routes/movie_routes');
+const NobelPrizeRoutes = require('./rootage/routes/nobel_prize_routes');
+const Routes = MovieRoutes.concat(NobelPrizeRoutes);
 
 const server = new Hapi.Server();
 server.connection({
@@ -12,7 +16,6 @@ server.connection({
         cors: true
     }
 });
-
 
 // setup swagger options
 const swaggerOptions = {

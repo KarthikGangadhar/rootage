@@ -108,7 +108,7 @@ module.exports = [{
         method: 'GET',
         path: '/prizes',
         config: {
-            handler: prizeHandlers.getAllPlayers,
+            handler: prizeHandlers.getAllPrizes,
             description: 'Get All Prizes',
             tags: ['api', 'reduced'],
             notes: ['Fetches all the existing prizes data from mongodb'],
@@ -123,7 +123,7 @@ module.exports = [{
         method: 'POST',
         path: '/prizes',
         config: {
-            handler: prizeHandlers.createPlayer,
+            handler: prizeHandlers.createPrize,
             description: 'Create New prizes',
             tags: ['api', 'reduced'],
             notes: ['Create a new prizes and updates data'],
@@ -141,7 +141,7 @@ module.exports = [{
         method: 'GET',
         path: '/prizes/prizeId',
         config: {
-            handler: prizeHandlers.getByIdPlayer,
+            handler: prizeHandlers.getByIdPrize,
             description: 'Get prizes By ID',
             tags: ['api', 'reduced'],
             notes: ['Fetches the existing prizes data by Id'],
@@ -161,7 +161,7 @@ module.exports = [{
         method: 'PUT',
         path: '/prizes/prizeId',
         config: {
-            handler: prizeHandlers.updatePlayer,
+            handler: prizeHandlers.updatePrize,
             description: 'Update existing prize Data',
             tags: ['api', 'reduced'],
             notes: ['Update a prizes data by Id'],
@@ -182,7 +182,7 @@ module.exports = [{
         method: 'DELETE',
         path: '/prizes/prizeId',
         config: {
-            handler: prizeHandlers.deletePlayer,
+            handler: prizeHandlers.deletePrize,
             description: 'Delete a prize Data',
             tags: ['api', 'reduced'],
             notes: ['Update a prize data by Id'],

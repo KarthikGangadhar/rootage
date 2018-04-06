@@ -22,12 +22,6 @@ const MoviesSchema = {
 
 
 // Prizes Schema
-const PrizesSchema = {
-    "year": Joi.string().required(),
-    "category": Joi.string().required(),
-    "laureates": Joi.array().items(laureateSchema)
-};
-
 const laureateSchema = {
     "id": Joi.string().required(),
     "firstname": Joi.string().required(),
@@ -36,7 +30,27 @@ const laureateSchema = {
     "share": Joi.string()
 };
 
+const PrizesSchema = {
+    "year": Joi.string().required(),
+    "category": Joi.string().required(),
+    "laureates": Joi.array().items(laureateSchema)
+};
+
 // Laureates Schema
+const affiliationSchema = {
+    "name": Joi.string(),
+    "city": Joi.string(),
+    "country": Joi.string()
+};
+
+const prizeSchema = {
+    "year": Joi.string(),
+    "category": Joi.string(),
+    "share": Joi.string(),
+    "motivation": Joi.string(),
+    "affiliations": Joi.array().items(affiliationSchema)
+};
+
 const LaureatesSchema = {
     "id": Joi.string().required(),
     "firstname": Joi.string().required(),
@@ -51,20 +65,6 @@ const LaureatesSchema = {
     "diedCity": Joi.string(),
     "gender": Joi.string(),
     "prizes": Joi.array().items(prizeSchema)
-};
-
-const affiliationSchema = {
-    "name": Joi.string(),
-    "city": Joi.string(),
-    "country": Joi.string()
-};
-
-const prizeSchema = {
-    "year": Joi.string(),
-    "category": Joi.string(),
-    "share": Joi.string(),
-    "motivation": Joi.string(),
-    "affiliations": Joi.array().items(affiliationSchema)
 };
 
 const ResultHTTPStatus = {
