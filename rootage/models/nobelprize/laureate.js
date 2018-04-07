@@ -18,7 +18,7 @@ const prizeSchema = mongoose.Schema({
 
 // set up a mongoose model and pass it using module.exports
 module.exports = mongoose.model('laureate', new Schema({
-    "id": String,
+    "id": { type : String , unique : true, required : true, dropDups: true },
     "firstname": String,
     "surname": String,
     "born": String,

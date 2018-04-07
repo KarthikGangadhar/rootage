@@ -4,6 +4,7 @@ var Schema = mongoose.Schema;
 
 // set up a mongoose model and pass it using module.exports
 module.exports = mongoose.model('movies', new Schema({
+    "id": { type : String , unique : true, required : true, dropDups: true },
     "title": String,
     "year": String,
     "genres": [String],

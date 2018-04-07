@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const laureateSchema = mongoose.Schema({
-    "id": String,
+    "id": { type : String , unique : true, required : true, dropDups: true },
     "firstname": String,
     "surname": String,
     "motivation": String,
