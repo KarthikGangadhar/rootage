@@ -50,6 +50,7 @@ server.register([
         options: swaggerOptions
     }
 ], (err) => {
+    if (err) console.error(err);
     server.start(() => {
         console.log('Server running at:', server.info.uri);
     });

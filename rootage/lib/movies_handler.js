@@ -1,3 +1,4 @@
+'use strict';
 const mongoose = require('mongoose');
 const config = require('../utils/config');
 const Movie = require('../models/movies/movies');
@@ -10,8 +11,8 @@ const CreateMovie = (request, reply) => {
     movie.save((err) => {
         if (err) {
             reply({
-                "err": err
-            })
+                'err': err
+            });
         } else {
             reply(movie);
         }
@@ -40,7 +41,8 @@ const DeleteMovie = (request, reply) => {
             });
         } else {
             reply({
-                message: "success"
+                message: 'success',
+                meta: data
             });
         }
     });
@@ -84,4 +86,4 @@ module.exports = {
     deleteMovie: DeleteMovie,
     getOneMovie: GetOneMovie,
     getByIdMovie: GetByIdMovie,
-}
+};

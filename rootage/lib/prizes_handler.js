@@ -1,3 +1,4 @@
+'use strict';
 const mongoose = require('mongoose');
 const config = require('../utils/config');
 const Prize = require('../models/nobelprize/prizes');
@@ -5,13 +6,13 @@ const Prize = require('../models/nobelprize/prizes');
 mongoose.connect(config.rootage);
 
 const CreatePrize = (request, reply) => {
-    var prize = new Prize(request.payload);
+    const prize = new Prize(request.payload);
 
     prize.save((err) => {
         if (err) {
             reply({
-                "err": err
-            })
+                'err': err
+            });
         } else {
             reply(prize);
         }
@@ -40,7 +41,8 @@ const DeletePrize = (request, reply) => {
             });
         } else {
             reply({
-                message: "success"
+                message: 'success',
+                meta: data
             });
         }
     });
@@ -84,4 +86,4 @@ module.exports = {
     deletePrize: DeletePrize,
     getOnePrize: GetOnePrize,
     getByIdPrize: GetByIdPrize,
-}
+};
