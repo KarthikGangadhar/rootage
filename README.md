@@ -3,9 +3,9 @@ This is a node based rest api which will provide you json endpoints for Movies, 
 
 Currently available JSON Data are follows:
 
-* [Movies](https://www.npmjs.com/package/stack-exchange#users-section)
-* [Nobel-laureates](https://www.npmjs.com/package/stack-exchange#users-section)
-* [Nobel-Prizes](https://www.npmjs.com/package/stack-exchange#users-section)
+* [Movies](https://github.com/KarthikGangadhar/rootage/blob/master/README.md#movies-)
+* [Nobel-laureates](https://github.com/KarthikGangadhar/rootage/blob/master/README.md#nobel-laureates-)
+* [Nobel-Prizes](https://github.com/KarthikGangadhar/rootage/blob/master/README.md#nobel-prizes-)
 
 ###### Movies : 
 Movie Data structure is as follows:
@@ -18,7 +18,7 @@ Movie Data structure is as follows:
         "genres": [
             "Drama"
         ],
-        "ratings": [5,6,8,1,2,5,8,2,8,6,10,6,3,7,6,4,1,10,3,6,5,3,9,8,7,2,4,10,5, 9],
+        "ratings": [5, 6, 8, 1, 2, 5, 8, 2, 8, 6, 10, 6, 3, 7, 6, 4, 1, 10, 3, 6, 5, 3, 9, 8, 7, 2, 4, 10, 5, 9],
         "poster": "MV5BMjE0Mzk3OTk2NF5BMl5BanBnXkFtZTgwMTQ1NDk5NTE@._V1_SY250_CR0,0,187,250_AL_.jpg",
         "contentRating": "",
         "duration": "PT122M",
@@ -32,8 +32,8 @@ Movie Data structure is as follows:
             "Sumita Sanyal"
         ],
         "imdbRating": 8.9,
-        "posterurl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjE0Mzk3OTk2NF5BMl5BanBnXkFtZTgwMTQ1NDk5NTE@._V1_SY250_CR0,0,187,250_AL_.jpg"  
-     } 
+        "posterurl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjE0Mzk3OTk2NF5BMl5BanBnXkFtZTgwMTQ1NDk5NTE@._V1_SY250_CR0,0,187,250_AL_.jpg"
+    } 
      
 ```
 
@@ -42,31 +42,32 @@ Nobel-laureates Data structure is as follows:
 
 ```json
 
- {
-    "id": "1",
-    "firstname": "Wilhelm Conrad",
-    "surname": "Röntgen",
-    "born": "1845-03-27",
-    "died": "1923-02-10",
-    "bornCountry": "Prussia (now Germany)",
-    "bornCountryCode": "DE",
-    "bornCity": "Lennep (now Remscheid)",
-    "diedCountry": "Germany",
-    "diedCountryCode": "DE",
-    "diedCity": "Munich",
-    "gender": "male",
-    "prizes": [{
-      "year": "1901",
-      "category": "physics",
-      "share": "1",
-      "motivation": "\"in recognition of the extraordinary services he has rendered by the discovery of the remarkable rays subsequently named after him\"",
-      "affiliations": [{
-        "name": "Munich University",
-        "city": "Munich",
-        "country": "Germany"
-      }]
-    }]
- }
+    {
+        "year": "2016",
+        "category": "physics",
+        "laureates": [{
+                "id": "928",
+                "firstname": "David J.",
+                "surname": "Thouless",
+                "motivation": "\"for theoretical discoveries of topological phase transitions and topological phases of matter\"",
+                "share": "2"
+            },
+            {
+                "id": "929",
+                "firstname": "F. Duncan M.",
+                "surname": "Haldane",
+                "motivation": "\"for theoretical discoveries of topological phase transitions and topological phases of matter\"",
+                "share": "4"
+            },
+            {
+                "id": "930",
+                "firstname": "J. Michael",
+                "surname": "Kosterlitz",
+                "motivation": "\"for theoretical discoveries of topological phase transitions and topological phases of matter\"",
+                "share": "4"
+            }
+        ]
+    }
 
 ```
 
@@ -76,32 +77,31 @@ Nobel-prizes Data structure is as follows:
 
 ```json
 
-   {
-      "year": "2016",
-      "category": "physics",
-      "laureates": [
-        {
-          "id": "928",
-          "firstname": "David J.",
-          "surname": "Thouless",
-          "motivation": "\"for theoretical discoveries of topological phase transitions and topological phases of matter\"",
-          "share": "2"
-        },
-        {
-          "id": "929",
-          "firstname": "F. Duncan M.",
-          "surname": "Haldane",
-          "motivation": "\"for theoretical discoveries of topological phase transitions and topological phases of matter\"",
-          "share": "4"
-        },
-        {
-          "id": "930",
-          "firstname": "J. Michael",
-          "surname": "Kosterlitz",
-          "motivation": "\"for theoretical discoveries of topological phase transitions and topological phases of matter\"",
-          "share": "4"
-        }
-      ]
-   }
+    {
+        "year": "2016",
+        "category": "physics",
+        "laureates": [{
+                "id": "928",
+                "firstname": "David J.",
+                "surname": "Thouless",
+                "motivation": "\"for theoretical discoveries of topological phase transitions and topological phases of matter\"",
+                "share": "2"
+            },
+            {
+                "id": "929",
+                "firstname": "F. Duncan M.",
+                "surname": "Haldane",
+                "motivation": "\"for theoretical discoveries of topological phase transitions and topological phases of matter\"",
+                "share": "4"
+            },
+            {
+                "id": "930",
+                "firstname": "J. Michael",
+                "surname": "Kosterlitz",
+                "motivation": "\"for theoretical discoveries of topological phase transitions and topological phases of matter\"",
+                "share": "4"
+            }
+        ]
+    }
 
 ```
