@@ -43,30 +43,29 @@ Nobel-laureates Data structure is as follows:
 ```json
 
     {
-        "year": "2016",
-        "category": "physics",
-        "laureates": [{
-                "id": "928",
-                "firstname": "David J.",
-                "surname": "Thouless",
-                "motivation": "\"for theoretical discoveries of topological phase transitions and topological phases of matter\"",
-                "share": "2"
-            },
-            {
-                "id": "929",
-                "firstname": "F. Duncan M.",
-                "surname": "Haldane",
-                "motivation": "\"for theoretical discoveries of topological phase transitions and topological phases of matter\"",
-                "share": "4"
-            },
-            {
-                "id": "930",
-                "firstname": "J. Michael",
-                "surname": "Kosterlitz",
-                "motivation": "\"for theoretical discoveries of topological phase transitions and topological phases of matter\"",
-                "share": "4"
-            }
-        ]
+        "id": "1",
+        "firstname": "Wilhelm Conrad",
+        "surname": "Röntgen",
+        "born": "1845-03-27",
+        "died": "1923-02-10",
+        "bornCountry": "Prussia (now Germany)",
+        "bornCountryCode": "DE",
+        "bornCity": "Lennep (now Remscheid)",
+        "diedCountry": "Germany",
+        "diedCountryCode": "DE",
+        "diedCity": "Munich",
+        "gender": "male",
+        "prizes": [{
+          "year": "1901",
+          "category": "physics",
+          "share": "1",
+          "motivation": "\"in recognition of the extraordinary services he has rendered by the discovery of the remarkable rays subsequently named after him\"",
+          "affiliations": [{
+            "name": "Munich University",
+            "city": "Munich",
+            "country": "Germany"
+          }]
+        }]
     }
 
 ```
