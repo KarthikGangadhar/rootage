@@ -4,6 +4,7 @@ const Joi = require('joi');
 
 // movies schema
 const MoviesSchema = {
+    'id': Joi.string().required(),
     'title': Joi.string().required(),
     'year': Joi.string().required(),
     'genres': Joi.array().items(Joi.string()),
@@ -17,7 +18,8 @@ const MoviesSchema = {
     'storyline': Joi.string(),
     'actors': Joi.array().items(Joi.string()),
     'imdbRating': Joi.number(),
-    'posterurl': Joi.string()
+    'posterurl': Joi.string(),
+    'type': Joi.string()
 };
 
 
