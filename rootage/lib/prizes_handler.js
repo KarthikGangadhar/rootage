@@ -79,6 +79,28 @@ const GetByIdPrize = (request, reply) => {
     });
 };
 
+const FilterPrize = (request, reply) => {
+    console.log('hello');
+    let query = {};
+    if (request && request.query && Object.keys(request.query).length > 0) {
+        if (request.query.year) {
+            query['year'] = request.query.year;
+        }
+        if (request.query.category) {
+            query['category'] = request.query.category;
+        }
+    }
+    Prize.find(query, (err, prizes) => {
+        if (err) {
+            reply({
+                'err': err
+            });
+        } else {
+            reply(prizes);
+        }
+    });
+}
+
 module.exports = {
     getAllPrizes: GetAllPrizes,
     createPrize: CreatePrize,
@@ -86,4 +108,5 @@ module.exports = {
     deletePrize: DeletePrize,
     getOnePrize: GetOnePrize,
     getByIdPrize: GetByIdPrize,
+    filterPrize: FilterPrize
 };

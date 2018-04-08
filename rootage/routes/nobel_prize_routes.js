@@ -158,6 +158,27 @@ module.exports = [{
     }
 },
 {
+    method: 'GET',
+    path: '/prizes/filter',
+    config: {
+        handler: prizeHandlers.filterPrize,
+        description: 'filter prizes By category or year or both',
+        tags: ['api', 'reduced'],
+        notes: ['filter prizes By category or year or both'],
+        plugins: {
+            'hapi-swagger': {
+                responses: resultHTTPStatus
+            }
+        },
+        validate: {
+            query: {
+                year: Joi.string().description('year: nobel prize awarded year'),
+                category: Joi.string().description('category: field of study')
+            }
+        }
+    }
+},
+{
     method: 'PUT',
     path: '/prizes/prizeId',
     config: {
