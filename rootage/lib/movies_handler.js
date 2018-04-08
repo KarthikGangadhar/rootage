@@ -2,6 +2,7 @@
 const mongoose = require('mongoose');
 const config = require('../utils/config');
 const Movie = require('../models/movies/movies');
+const queryHelper = require('../utils/query_helper');
 
 mongoose.connect(config.rootage);
 
@@ -79,6 +80,19 @@ const GetByIdMovie = (request, reply) => {
     });
 };
 
+const FilterMovies = (request, reply) => {
+    queryHelper.getFilterQueryForMovies(request.query).then((query) => {
+        Movie.find(query, (err, movie) => {
+            if (err) {
+                reply({
+                    err: err
+                });
+            } else {
+                reply(movie);
+            }
+        });
+    });
+};
 module.exports = {
     getAllMovies: GetAllMovies,
     createMovie: CreateMovie,
@@ -86,4 +100,5 @@ module.exports = {
     deleteMovie: DeleteMovie,
     getOneMovie: GetOneMovie,
     getByIdMovie: GetByIdMovie,
+    filterMovies: FilterMovies
 };

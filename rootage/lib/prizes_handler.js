@@ -81,7 +81,6 @@ const GetByIdPrize = (request, reply) => {
 };
 
 const FilterPrize = (request, reply) => {
-    console.log('hello');
     queryHelper.getFilterQuery(request.query).then((query) => {
         Prize.find(query, (err, prizes) => {
             if (err) {

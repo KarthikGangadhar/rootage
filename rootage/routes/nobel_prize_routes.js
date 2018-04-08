@@ -172,8 +172,8 @@ module.exports = [{
         },
         validate: {
             query: {
-                year: Joi.string().description('year: nobel prize awarded year'),
-                category: Joi.string().description('category: field of study')
+                year: Joi.string().description('nobel prize awarded year, can pass ; seperated multiple value' ),
+                category: Joi.string().description('field of study, can pass ; seperated multiple value')
             }
         }
     }

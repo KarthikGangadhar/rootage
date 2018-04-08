@@ -72,6 +72,14 @@ const GetFilterQuery = (queryParams) => {
     });
 };
 
+const GetFilterQueryForMovies = (queryParams) => {
+    return new Promise((resolve) => {
+        console.log(queryParams);
+        resolve({});
+    });
+};
+
 module.exports = {
-    getFilterQuery: GetFilterQuery
+    getFilterQuery: GetFilterQuery,
+    getFilterQueryForMovies: GetFilterQueryForMovies
 };
