@@ -50,6 +50,7 @@ const prizeSchema = {
     'category': Joi.string(),
     'share': Joi.string(),
     'motivation': Joi.string(),
+    'overallMotivation': Joi.string(),
     'affiliations': Joi.array().items(affiliationSchema)
 };
 

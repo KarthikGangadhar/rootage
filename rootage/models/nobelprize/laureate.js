@@ -14,6 +14,7 @@ const prizeSchema = mongoose.Schema({
     'category': String,
     'share': String,
     'motivation': String,
+    'overallMotivation': String,
     'affiliations': [affiliationSchema]
 });
 
@@ -33,3 +34,14 @@ module.exports = mongoose.model('laureate', new Schema({
     'gender': String,
     'prizes': [prizeSchema]
 }));
+
+// "year": "1994",
+//       "category": "physics",
+//       "overallMotivation": "\"for pioneering contributions to the development of neutron scattering techniques for studies of condensed matter\"",
+//       "share": "2",
+//       "motivation": "\"for the development of neutron spectroscopy\"",
+//       "affiliations": [{
+//         "name": "McMaster University",
+//         "city": "Hamilton, Ontario",
+//         "country": "Canada"
+//       }]
