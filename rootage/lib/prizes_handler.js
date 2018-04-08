@@ -2,6 +2,7 @@
 const mongoose = require('mongoose');
 const config = require('../utils/config');
 const Prize = require('../models/nobelprize/prizes');
+const queryHelper = require('../utils/query_helper');
 
 mongoose.connect(config.rootage);
 
@@ -81,25 +82,18 @@ const GetByIdPrize = (request, reply) => {
 
 const FilterPrize = (request, reply) => {
     console.log('hello');
-    let query = {};
-    if (request && request.query && Object.keys(request.query).length > 0) {
-        if (request.query.year) {
-            query['year'] = request.query.year;
-        }
-        if (request.query.category) {
-            query['category'] = request.query.category;
-        }
-    }
-    Prize.find(query, (err, prizes) => {
-        if (err) {
-            reply({
-                'err': err
-            });
-        } else {
-            reply(prizes);
-        }
+    queryHelper.getFilterQuery(request.query).then((query) => {
+        Prize.find(query, (err, prizes) => {
+            if (err) {
+                reply({
+                    'err': err
+                });
+            } else {
+                reply(prizes);
+            }
+        });
     });
-}
+};
 
 module.exports = {
     getAllPrizes: GetAllPrizes,
