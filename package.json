@@ -31,7 +31,7 @@
     "hapi-swagger": "^6.0.0",
     "inert": "^4.1.x",
     "joi": "^10.1.0",
-    "mongoose": "^5.8.11",
+    "mongoose": "^5.13.15",
     "vision": "^4.1.x"
   },
   "engines": {
